@@ -117,10 +117,10 @@ class Car {
         + {name} and {location} of course come from the instance's own properties.
 */
 class Lambdasian {
-  constructor(props) {
-    this.name = props.name;
-    this.age = props.age;
-    this.location = props.location;
+  constructor(attrs) {
+    this.name = attrs.name;
+    this.age = attrs.age;
+    this.location = attrs.location;
   }
 
   speak() {
@@ -143,11 +143,11 @@ class Lambdasian {
         + `grade` receives a `student` object and a `subject` string as arguments and returns '{student.name} receives a perfect score on {subject}'
 */
 class Instructor extends Lambdasian {
-  constructor(props) {
-    super(props);
-    this.specialty = props.specialty;
-    this.favLanguage = props.favLanguage;
-    this.catchPhrase = props.catchPhrase;
+  constructor(attrs) {
+    super(attrs);
+    this.specialty = attrs.specialty;
+    this.favLanguage = attrs.favLanguage;
+    this.catchPhrase = attrs.catchPhrase;
   }
 
   demo(subject) {
@@ -174,11 +174,11 @@ class Instructor extends Lambdasian {
         + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
 */
 class Student extends Lambdasian {
-  constructor(props) {
-    super(props);
-    this.previousBackground = props.previousBackground;
-    this.className = props.className;
-    this.favSubjects = props.favSubjects;
+  constructor(attrs) {
+    super(attrs);
+    this.previousBackground = attrs.previousBackground;
+    this.className = attrs.className;
+    this.favSubjects = attrs.favSubjects;
   }
 
   listSubjects() {
@@ -208,10 +208,10 @@ class Student extends Lambdasian {
         + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
 */
 class ProjectManager extends Instructor {
-  constructor(props) {
-    super(props);
-    this.gradClassName = props.gradClassName;
-    this.favInstructor = props.favInstructor;
+  constructor(attrs) {
+    super(attrs);
+    this.gradClassName = attrs.gradClassName;
+    this.favInstructor = attrs.favInstructor;
   }
 
   standUp(channel) {
